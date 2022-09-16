@@ -6,7 +6,7 @@ let dataTimeout = null
 
 export default {
   setupComponent(args, component) {
-    withPluginApi('0.8.8', api => init(api, component, args))
+    withPluginApi('1.2.0', api => init(api, component, args))
   },
 }
 
@@ -40,6 +40,7 @@ function startTicks(component) {
 	}
 
   clockTick(component)
+  metaTick(component)
 }
 
 function clockTick(component) {
@@ -77,6 +78,66 @@ function clockTick(component) {
   } else {
     component.set('showCountdown', false)
   }
+}
+
+function metaTick(component) {
+  let metaTopicId = component.siteSettings.fuse_meta_topic_id
+  let apiUser = component.siteSettings.fuse_api_user
+  let apiKey = component.siteSettings.fuse_api_key
+
+  console.group()
+  console.log("metaTopicId", metaTopicId)
+  console.log("apiUser", apiUser)
+  console.log("apiKey", apiKey)
+  console.groupEnd()
+
+  fetch(`/t/${metaTopicId}.json`, {
+    headers: {
+      'Api-Key': apiKey,
+      'Api-Username': apiUser
+    }
+  })
+    .then(response => response.json())
+    .then((data) => {
+      let parsed = parseMeta(data)
+      console.log(parsed)
+    })
+}
+
+function parseMeta(raw) {
+  let cooked = raw.post_stream.posts[0].cooked
+  let split = cooked.split('<hr>')
+  let parsed = []
+
+  split.forEach(entry => {
+
+    let p = parseMetaEntry(entry)
+
+    parsed.push(p)
+  })
+
+  return parsed
+}
+
+function parseMetaEntry(entry) {
+  let raw = entry.replace(/(<([^>]+)>)/ig, '')
+
+  let lines = raw.split('\n').filter(l => l.length > 0)
+
+  let obj = {}
+
+  lines.forEach(line => {
+
+    let a = line.substring(0, line.indexOf(':')).trim()
+    let b = line.substring(line.indexOf(':')).replace(':', '').trim()
+
+    obj[a] = b
+  })
+
+  obj.experts = obj.experts.split(',').map(entry => entry.trim())
+  obj.expertTopicIds = obj.expertTopicIds.split(',').map(entry => entry.trim())
+
+  return obj
 }
 
 // --- --- --- --- --- --- --- --- ---
