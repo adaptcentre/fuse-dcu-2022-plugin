@@ -1,1 +1,15 @@
-[{"title":"This is a test Topic - 1","categoryId":"1","live":"true/false","experts":["Expert 1","Expert 2","Expert 3"],"date":"YYYY/MM/DD","time":"HH:MM - HH:MM","hidden":false}]
+[
+  {
+    "title": "This is a test Topic - 1",
+    "categoryId": "1",
+    "live": "true/false",
+    "experts": [
+      "Expert 1",
+      "Expert 2",
+      "Expert 3"
+    ],
+    "date": "YYYY/MM/DD",
+    "time": "HH:MM - HH:MM",
+    "hidden": true
+  }
+]
