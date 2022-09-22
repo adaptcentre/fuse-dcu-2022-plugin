@@ -1,8 +1,14 @@
 import { withPluginApi } from "discourse/lib/plugin-api"
 
+// --- --- --- --- --- --- --- --- ---
+// --- --- --- --- --- --- --- --- ---
+
 // GLOBAL VARS
 let clockTimeout = null
-let dataTimeout = null
+let metaTimeout = null
+
+// --- --- --- --- --- --- --- --- ---
+// --- --- --- --- --- --- --- --- ---
 
 export default {
   setupComponent(args, component) {
@@ -13,35 +19,23 @@ export default {
 function init(api, component, args) {
   api.onPageChange((url, title) => {
     let isEnabled = component.siteSettings.fuse_enabled
-    let showLandingPage = isCorrectUrl(url)
+    let correctUrl = isCorrectUrl(url)
 
-    debugPrint(isEnabled, showLandingPage)
+    component.set('showPlugin', false)
+    clearTimeout(clockTimeout)
+    clearTimeout(metaTimeout)
 
-    if (showLandingPage && isEnabled) {
-      component.set('showLandingPage', true)
-      startTicks(component)
-    } else {
-      component.set('showLandingPage', false)
-
-      clearTimeout(clockTimeout)
-      clearTimeout(dataTimeout)
+    if (correctUrl && isEnabled) {
+      component.set('showPlugin', true)
+      
+      clockTick(component)
+      metaTick(component)
     }
   })
 }
 
 // --- --- --- --- --- --- --- --- ---
 // --- --- --- --- --- --- --- --- ---
-
-function startTicks(component) {
-	component.set('showCountdown', true) // might be able to remove
-
-  if (clockTimeout) {
-    clearTimeout(clockTimeout)
-	}
-
-  clockTick(component)
-  metaTick(component)
-}
 
 function clockTick(component) {
   let fuse_date = new Date(component.siteSettings.fuse_date)
@@ -74,89 +68,36 @@ function clockTick(component) {
 
     clockTimeout = setTimeout(() => {
       clockTick(component)
-    }, 500)
+    }, 333)
   } else {
     component.set('showCountdown', false)
   }
 }
 
 function metaTick(component) {
-  let metaTopicId = component.siteSettings.fuse_meta_topic_id
-  let apiUser = component.siteSettings.fuse_api_user
-  let apiKey = component.siteSettings.fuse_api_key
+  let url = 'https://raw.githubusercontent.com/adaptcentre/fuse-dcu-2022-plugin/main/public/meta/topics.json'
 
-  console.group()
-  console.log("metaTopicId", metaTopicId)
-  console.log("apiUser", apiUser)
-  console.log("apiKey", apiKey)
-  console.groupEnd()
+  fetch(url)
+    .then(res => res.json())
+    .then(data => console.log(data))
+  
 
-  fetch(`/t/${metaTopicId}.json`, {
-    headers: {
-      'Api-Key': apiKey,
-      'Api-Username': apiUser
-    }
-  })
-    .then(response => response.json())
-    .then((data) => {
-      let parsed = parseMeta(data)
-      console.log(parsed)
-    })
-}
-
-function parseMeta(raw) {
-  let cooked = raw.post_stream.posts[0].cooked
-  let split = cooked.split('<hr>')
-  let parsed = []
-
-  split.forEach(entry => {
-
-    let p = parseMetaEntry(entry)
-
-    parsed.push(p)
-  })
-
-  return parsed
-}
-
-function parseMetaEntry(entry) {
-  let raw = entry.replace(/(<([^>]+)>)/ig, '')
-
-  let lines = raw.split('\n').filter(l => l.length > 0)
-
-  let obj = {}
-
-  lines.forEach(line => {
-
-    let a = line.substring(0, line.indexOf(':')).trim()
-    let b = line.substring(line.indexOf(':')).replace(':', '').trim()
-
-    obj[a] = b
-  })
-
-  obj.experts = obj.experts.split(',').map(entry => entry.trim())
-  obj.expertTopicIds = obj.expertTopicIds.split(',').map(entry => entry.trim())
-
-  return obj
+  clockTimeout = setTimeout(() => {
+    metaTick(component)
+  }, 1000 * 5) // every 5 seconds?
 }
 
 // --- --- --- --- --- --- --- --- ---
 // --- --- --- --- --- --- --- --- ---
 
 function isCorrectUrl( url ) {
-
   if( url === '/' ) {
     return true
   }
 
-  return false
-}
+  if (url === '/categories') {
+    return true
+  }
 
-// --- --- --- --- --- --- --- --- ---
-// --- --- --- --- --- --- --- --- ---
-function debugPrint(isEnabled, showLandingPage) {
-  console.group('Fuse Plugin Settings')
-  console.log("isEnabled", isEnabled)
-  console.log("showLandingPage", showLandingPage)
-  console.groupEnd()
+  return false
 }
