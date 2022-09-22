@@ -82,7 +82,7 @@ function metaTick(component) {
     .then(data => console.log(data))
   
 
-  clockTimeout = setTimeout(() => {
+  metaTimeout = setTimeout(() => {
     metaTick(component)
   }, 1000 * 5) // every 5 seconds?
 }
