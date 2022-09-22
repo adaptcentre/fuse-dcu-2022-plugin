@@ -20,15 +20,17 @@ $yellowTint: #FFEEB2;
 
 .fuse-countdown-clock {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
 
-  .days-wrapper, .hours-wrapper, .minutes-wrapper, .seconds-wrapper {
+  .time-wrapper {
     text-align: center;
 
     background: $navy;
-    width: 210px;
-    height: 210px;
+    width: 150px;
+    height: 150px;
 
     display: flex;
     justify-content: center;
@@ -36,15 +38,62 @@ $yellowTint: #FFEEB2;
     flex-direction: column;
 
     .time {
-      font-size: 5rem;
+      font-size: 3rem;
       font-weight: 800;
       color: $yellow
     }
 
     .desc {
-      font-size: 1.3rem;
+      font-size: 1.1rem;
       color: $yellowTint
     }
+  }
+
+  // Small devices (landscape phones, 576px and up)
+  @media (min-width: 576px) {
+    .time-wrapper {
+      width: 180px;
+      height: 180px;
+  
+      .time {
+        font-size: 4rem;
+      }
+  
+      .desc {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  // Medium devices (tablets, 768px and up)
+  @media (min-width: 768px) {
+    .time-wrapper {
+        width: 210px;
+        height: 210px;
+    
+        .time {
+          font-size: 5rem;
+        }
+    
+        .desc {
+          font-size: 1.3rem;
+        }
+      }
+  }
+
+  // Large devices (desktops, 992px and up)
+  @media (min-width: 992px) {
+    
+  }
+
+  // X-Large devices (large desktops, 1200px and up)
+  @media (min-width: 1200px) {
+    
+  }
+
+  // XX-Large devices (larger desktops, 1400px and up)
+  @media (min-width: 1400px) {
+    
   }
 }
 

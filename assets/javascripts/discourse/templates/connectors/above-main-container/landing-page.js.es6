@@ -13,7 +13,7 @@ let metaTimeout = null
 export default {
   setupComponent(args, component) {
     withPluginApi('1.2.0', api => init(api, component, args))
-  },
+  }
 }
 
 function init(api, component, args) {
