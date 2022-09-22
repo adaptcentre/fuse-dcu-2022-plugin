@@ -77,7 +77,9 @@ function clockTick(component) {
 function metaTick(component) {
   let url = 'https://raw.githubusercontent.com/adaptcentre/fuse-dcu-2022-plugin/main/public/meta/topics.json'
 
-  fetch(url)
+  url += `?t=${Date.now()}`
+
+  fetch(url, { cache: 'no-store' })
     .then(res => res.json())
     .then(data => console.log(data))
   
