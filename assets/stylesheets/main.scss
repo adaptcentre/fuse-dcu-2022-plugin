@@ -4,6 +4,20 @@ $yellow: #FFC800;
 $yellowTint: #FFEEB2;
 
 
+.fuse-section-header {
+  background: $navy;
+  
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+
+  h2 {
+    color: $yellow;
+    margin-bottom: 0;
+  }
+}
+
 .fuse-countdown-clock {
   display: flex;
   justify-content: space-between;
@@ -12,9 +26,9 @@ $yellowTint: #FFEEB2;
   .days-wrapper, .hours-wrapper, .minutes-wrapper, .seconds-wrapper {
     text-align: center;
 
-    border: 2px solid black;
-    width: 200px;
-    height: 200px;
+    background: $navy;
+    width: 210px;
+    height: 210px;
 
     display: flex;
     justify-content: center;
@@ -24,12 +38,12 @@ $yellowTint: #FFEEB2;
     .time {
       font-size: 5rem;
       font-weight: 800;
-      //color: var(--clock-time-color);
+      color: $yellow
     }
 
     .desc {
       font-size: 1.3rem;
-      //color: var(--clock-desc-color);
+      color: $yellowTint
     }
   }
 }
@@ -49,6 +63,10 @@ $yellowTint: #FFEEB2;
     }
   }
 }
+
+//  --- --- --- --- --- --- --- ---
+//  Utility classes
+//  --- --- --- --- --- --- --- ---
 
 .mt-1 {
   margin-top: 1rem;

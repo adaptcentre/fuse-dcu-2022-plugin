@@ -4,51 +4,66 @@
     <img src="/plugins/fuse-dcu-2022-plugin/fuse/DCU_Fuse_Platform_Files.png" alt="" style="width:100%;">
   </div>
 
-  <div class="mt-3">
-
-  </div>
-
   <!-- COUNTDOWN -->
   {{#if showCountdown}}
-  <div class="fuse-countdown-clock mt-3">
-    <div class="days-wrapper">
-      <div class="time">
-        {{countdownDays}}
-      </div>
-      <div class="desc">
-        {{countdownDaysText}}
-      </div>
-    </div>
 
-    <div class="hours-wrapper">
-      <div class="time">
-        {{countdownHours}}
-      </div>
-      <div class="desc">
-        {{countdownHoursText}}
-      </div>
+  <div class="mt-3">
+    <div class="fuse-section-header">
+      <h2> Not long now </h2>
     </div>
-
-    <div class="minutes-wrapper">
-      <div class="time">
-        {{countdownMinutes}}
+    
+    <div class="fuse-countdown-clock mt-1">
+      <div class="days-wrapper">
+        <div class="time">
+          {{countdownDays}}
+        </div>
+        <div class="desc">
+          {{countdownDaysText}}
+        </div>
       </div>
-      <div class="desc">
-        {{countdownMinutesText}}
+    
+      <div class="hours-wrapper">
+        <div class="time">
+          {{countdownHours}}
+        </div>
+        <div class="desc">
+          {{countdownHoursText}}
+        </div>
       </div>
-    </div>
-
-    <div class="seconds-wrapper">
-      <div class="time">
-        {{countdownSeconds}}
+    
+      <div class="minutes-wrapper">
+        <div class="time">
+          {{countdownMinutes}}
+        </div>
+        <div class="desc">
+          {{countdownMinutesText}}
+        </div>
       </div>
-      <div class="desc">
-        {{countdownSecondsText}}
+    
+      <div class="seconds-wrapper">
+        <div class="time">
+          {{countdownSeconds}}
+        </div>
+        <div class="desc">
+          {{countdownSecondsText}}
+        </div>
       </div>
     </div>
   </div>
+  
   {{/if}}
 
-  <div class="mt-3"></div>
+  
+  <div class="mt-3">
+    <div class="fuse-section-header">
+      <h2> Lorem Ipsum </h2>
+    </div>
+  </div>
+
+  <div class="mt-3">
+    <div class="fuse-section-header">
+      <h2> Lorem Ipsum </h2>
+    </div>
+  </div>
 
 {{/if}}
