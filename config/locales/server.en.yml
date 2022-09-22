@@ -2,6 +2,3 @@ en:
   site_settings:
     fuse_enabled: "Do you want to enable the plugin?"
     fuse_date: "MM DD YYYY HH:MM:SS GMT+0100"
-    fuse_meta_topic_id: "What's the id of the meta topics topic?"
-    fuse_api_user: "api user"
-    fuse_api_key: "api key"

@@ -5,12 +5,3 @@ plugins:
   fuse_date:
     default: "OCT 21 2022 10:00:00 GMT+0100"
     client: true
-  fuse_meta_topic_id:
-    default: ''
-    client: true
-  fuse_api_user:
-    default: ''
-    client: true
-  fuse_api_key:
-    default: ''
-    client: true
