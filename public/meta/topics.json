@@ -2,14 +2,43 @@
   {
     "title": "This is a test Topic - 1",
     "categoryId": "1",
-    "live": "true/false",
     "experts": [
       "Expert 1",
       "Expert 2",
       "Expert 3"
     ],
-    "date": "YYYY/MM/DD",
-    "time": "HH:MM - HH:MM",
-    "hidden": true
+    "date": "21/01/2022",
+    "time": {
+      "start": "10:00",
+      "end": "11:00"
+    }
+  },
+  {
+    "title": "This is a test Topic - 2",
+    "categoryId": "2",
+    "experts": [
+      "Expert 1",
+      "Expert 2",
+      "Expert 3"
+    ],
+    "date": "21/01/2022",
+    "time": {
+      "start": "11:00",
+      "end": "12:00"
+    }
+  },
+  {
+    "title": "This is a test Topic - 3",
+    "categoryId": "3",
+    "experts": [
+      "Expert 1",
+      "Expert 2",
+      "Expert 3"
+    ],
+    "date": "21/01/2022",
+    "time": {
+      "start": "12:00",
+      "end": "13:00"
+    }
   }
 ]
