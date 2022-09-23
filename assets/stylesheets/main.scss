@@ -98,19 +98,25 @@ $yellowTint: #FFEEB2;
 }
 
 .fuse-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  padding-top: 20px;
-  padding-bottom: 20px;
-
-  .fuse-footer-img {
-    width: 200px;
-
-    img {
-      width: 100%;
-      height: auto;
+  background: $navy;
+  .wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    padding-top: 20px;
+    padding-bottom: 20px;
+  
+    .fuse-footer-img {
+      width: 230px;
+  
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    .adapt-logo {
+      width: 100px;
     }
   }
 }
