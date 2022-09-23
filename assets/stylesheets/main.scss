@@ -101,10 +101,12 @@ $yellowTint: #FFEEB2;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: lightslategray;
+
+  padding-top: 20px;
+  padding-bottom: 20px;
 
   .fuse-footer-img {
-    width: 100px;
+    width: 200px;
 
     img {
       width: 100%;
