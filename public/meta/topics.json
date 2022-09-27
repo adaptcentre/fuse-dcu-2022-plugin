@@ -1,44 +1,134 @@
 [
   {
-    "title": "This is a test Topic - 1",
-    "categoryId": "1",
+    "title": "Our DCU Fuse Opening",
+    "categoryId": 6,
     "experts": [
-      "Expert 1",
-      "Expert 2",
-      "Expert 3"
+      "Daire Keogh"
     ],
-    "date": "21/01/2022",
+    "date": "21/10/2022",
     "time": {
       "start": "10:00",
+      "end": "10:45"
+    }
+  },
+  {
+    "title": "Living the DCU Values",
+    "categoryId": 6,
+    "experts": [
+      "Marian Burns"
+    ],
+    "date": "21/10/2022",
+    "time": {
+      "start": "10:15",
       "end": "11:00"
     }
   },
   {
-    "title": "This is a test Topic - 2",
-    "categoryId": "2",
+    "title": "Building Connections across the DCU Community",
+    "categoryId": 6,
     "experts": [
-      "Expert 1",
-      "Expert 2",
-      "Expert 3"
+      "Anne Looney"
     ],
-    "date": "21/01/2022",
+    "date": "21/10/2022",
     "time": {
-      "start": "11:00",
+      "start": "10:45",
+      "end": "11:30"
+    }
+  },
+  {
+    "title": "Themes of the DCU Strategic Plan 2023-2028",
+    "categoryId": 6,
+    "experts": [
+      "Anne Sinnott"
+    ],
+    "date": "21/10/2022",
+    "time": {
+      "start": "11:15",
       "end": "12:00"
     }
   },
   {
-    "title": "This is a test Topic - 3",
-    "categoryId": "3",
+    "title": "Enhancing our Communications",
+    "categoryId": 6,
     "experts": [
-      "Expert 1",
-      "Expert 2",
-      "Expert 3"
+      "Celine Crawford"
     ],
-    "date": "21/01/2022",
+    "date": "21/10/2022",
     "time": {
-      "start": "12:00",
+      "start": "11:45",
+      "end": "12:30"
+    }
+  },
+  {
+    "title": "Celebrating a Diverse and Inclusive DCU Community",
+    "categoryId": 6,
+    "experts": [
+      "Anne Sinnott"
+    ],
+    "date": "21/10/2022",
+    "time": {
+      "start": "12:15",
       "end": "13:00"
+    }
+  },
+  {
+    "title": "Recognising Staff Contributions and Achievement",
+    "categoryId": 6,
+    "experts": [
+      "Ciaran McGivern"
+    ],
+    "date": "21/10/2022",
+    "time": {
+      "start": "12:45",
+      "end": "13:30"
+    }
+  },
+  {
+    "title": "Learning from the Covid Emergency",
+    "categoryId": 6,
+    "experts": [
+      "Declan Raftery"
+    ],
+    "date": "21/10/2022",
+    "time": {
+      "start": "13:15",
+      "end": "14:00"
+    }
+  },
+  {
+    "title": "Supporting Staff Health and Wellbeing",
+    "categoryId": 6,
+    "experts": [
+      "Lisa Looney"
+    ],
+    "date": "21/10/2022",
+    "time": {
+      "start": "13:45",
+      "end": "14:30"
+    }
+  },
+  {
+    "title": "The Role of Staff in Achieving our Strategic Goals",
+    "categoryId": 6,
+    "experts": [
+      "John Doyle"
+    ],
+    "date": "21/10/2022",
+    "time": {
+      "start": "14:15",
+      "end": "15:00"
+    }
+  },
+  {
+    "title": "Bringing Your Ideas Together",
+    "categoryId": 6,
+    "experts": [
+      "Daire Marian"
+    ],
+    "date": "21/10/2022",
+    "time": {
+      "start": "14:45",
+      "end": "15:30"
     }
   }
 ]
