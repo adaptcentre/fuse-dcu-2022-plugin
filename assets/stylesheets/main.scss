@@ -141,6 +141,10 @@ $yellowTint: #FFEEB2;
 
   cursor: pointer;
 
+  a:visited {
+    color: inherit;
+  }
+
   .fuse-event-time {
     padding-bottom: 10px;
   }
