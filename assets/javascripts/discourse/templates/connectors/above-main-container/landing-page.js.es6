@@ -114,5 +114,9 @@ function isCorrectUrl( url ) {
     return true
   }
 
+  if (url === '/login') {
+    return true
+  }
+
   return false
 }
