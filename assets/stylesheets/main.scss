@@ -24,6 +24,7 @@ $yellowTint: #FFEEB2;
   align-items: center;
   flex-wrap: wrap;
   gap: 20px;
+  user-select: none;
 
   .time-wrapper {
     text-align: center;
