@@ -92,11 +92,13 @@ function metaTick(component) {
 
   fetch(url, { cache: 'no-store' })
     .then(res => res.json())
-    .then(data => console.log(data))
+    .then(data => {
+      component.set('events', data)
+    })
   
 
   metaTimeout = setTimeout(() => {
-    metaTick(component)
+   // metaTick(component)
   }, 1000 * 5) // every 5 seconds?
 }
 

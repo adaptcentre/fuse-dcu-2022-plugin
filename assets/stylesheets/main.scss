@@ -122,6 +122,48 @@ $yellowTint: #FFEEB2;
   }
 }
 
+.fuse-event-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 30%);
+  gap: 15px;
+  justify-content: space-around;
+}
+
+.fuse-event {
+  background: $navy;
+  color: $yellow;
+  //width: 30%;
+  height: 150px;
+  padding: 10px;
+
+  display: flex;
+  flex-direction: column;
+
+  cursor: pointer;
+
+  .fuse-event-time {
+    padding-bottom: 10px;
+  }
+
+  .fuse-event-title {
+    font-size: 1.3rem;
+  }
+
+  .fuse-event-chairs {
+    flex-grow: 1;
+    align-self: flex-end;
+    margin-top: auto;
+
+    display: flex;
+    align-items: flex-end;
+  }
+}
+
+.fuse-event:hover {
+  background: $yellowTint;
+  color: $navy;
+}
+
 //  --- --- --- --- --- --- --- ---
 //  Utility classes
 //  --- --- --- --- --- --- --- ---
