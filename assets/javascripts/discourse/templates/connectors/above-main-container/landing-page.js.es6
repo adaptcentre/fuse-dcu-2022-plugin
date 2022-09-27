@@ -33,6 +33,7 @@ function init(api, component, args) {
     }
 
     checkListControls(component)
+    checkLoginRequired(url, component)
   })
 }
 
@@ -42,7 +43,29 @@ function init(api, component, args) {
 function checkListControls(component) {
   let showListControls = component.siteSettings.fuse_list_controls
 
-  document.querySelector('.list-controls').style.display = showListControls ? 'block' : 'none'
+  let element = document.querySelector('.list-controls')
+
+  if(element) {
+    element.style.display = showListControls ? 'block' : 'none'
+  }
+}
+
+function checkLoginRequired(url, component) {
+  
+  if (url !== '/login') {
+    component.set('showRequiredLogin', false)
+    return null
+  }
+
+  component.set('showRequiredLogin', true)
+
+  setTimeout(() => {
+    let element = document.querySelector('.container.ember-view')
+
+    if (element) {
+      element.style.display = 'none'
+    }
+  }, 800)
 }
 
 // --- --- --- --- --- --- --- --- ---

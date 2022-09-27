@@ -4,9 +4,38 @@
     <img src="/plugins/fuse-dcu-2022-plugin/fuse/DCU_Fuse_Platform_Files.png" alt="" style="width:100%;">
   </div>
 
+  {{#if showRequiredLogin}}
+  <div class="mt-3">
+    <div class="fuse-section-header">
+      <h2> Log in required to continue </h2>
+    </div>
+
+    <div class="mt-1">
+      An account is required. Please create an account or log in to continue.
+    </div>
+
+    <div class="mt-1">
+      <div class="body-page-button-container">
+        <button id="ember741" class="btn-primary sign-up-button btn btn-text ember-view" type="button">
+          <!----><span class="d-button-label">Sign Up
+            <!---->
+          </span>
+        </button>
+      
+        <button id="ember742" class="btn-primary login-button btn btn-icon-text ember-view" type="button"><svg
+            class="fa d-icon d-icon-user svg-icon svg-string" xmlns="http://www.w3.org/2000/svg">
+            <use href="#user"></use>
+          </svg><span class="d-button-label">Log In
+            <!---->
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+  {{/if}}
+
   <!-- COUNTDOWN -->
   {{#if showCountdown}}
-
   <div class="mt-3">
     <div class="fuse-section-header">
       <h2> Not long now </h2>
@@ -50,15 +79,15 @@
       </div>
     </div>
   </div>
-  
   {{/if}}
 
-  
+  {{#if showCurrent}}
   <div class="mt-3">
     <div class="fuse-section-header">
-      <h2> Lorem Ipsum </h2>
+      <h2> Current </h2>
     </div>
   </div>
+  {{/if}}
 
   <div class="mt-3 mb-3">
     <div class="fuse-section-header">
