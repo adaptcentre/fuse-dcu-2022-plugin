@@ -124,9 +124,19 @@ $yellowTint: #FFEEB2;
 
 .fuse-event-wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 30%);
+  grid-template-columns: repeat(auto-fill, 90%);
   gap: 15px;
   justify-content: space-around;
+
+  // Small devices (landscape phones, 576px and up)
+  @media (min-width: 576px) {
+    grid-template-columns: repeat(auto-fill, 45%);
+  }
+  
+  // Medium devices (tablets, 768px and up)
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(auto-fill, 30%);
+  }
 }
 
 .fuse-event {
