@@ -5,3 +5,6 @@ plugins:
   fuse_date:
     default: "OCT 21 2022 10:00:00 GMT+0100"
     client: true
+  fuse_list_controls: 
+    default: true
+    client: true

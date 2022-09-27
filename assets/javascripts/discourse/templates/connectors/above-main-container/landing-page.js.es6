@@ -31,7 +31,18 @@ function init(api, component, args) {
       clockTick(component)
       metaTick(component)
     }
+
+    checkListControls(component)
   })
+}
+
+// --- --- --- --- --- --- --- --- ---
+// --- --- --- --- --- --- --- --- ---
+
+function checkListControls(component) {
+  let showListControls = component.siteSettings.fuse_list_controls
+
+  document.querySelector('.list-controls').style.display = showListControls ? 'block' : 'none'
 }
 
 // --- --- --- --- --- --- --- --- ---
