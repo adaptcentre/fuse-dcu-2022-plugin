@@ -3,6 +3,26 @@ $blue: #00A5F7;
 $yellow: #FFC800;
 $yellowTint: #FFEEB2;
 
+$sm-min-width: 576px;
+$md-min-width: 768px;
+$lg-min-width: 992px;
+$xl-min-width: 1200px;
+$xxl-min-width: 1400px;
+
+// Small devices (landscape phones, 576px and up)
+// @media (min-width: $sm-min-width) {}
+  
+// Medium devices (tablets, 768px and up)
+// @media (min-width: $md-min-width) {}
+  
+// Large devices (desktops, 992px and up)
+// @media (min-width: $lg-min-width) {}
+  
+// X-Large devices (large desktops, 1200px and up)
+// @media (min-width: $xl-min-width) {}
+  
+// XX-Large devices (larger desktops, 1400px and up)
+// @media (min-width: $xxl-min-width) {}
 
 .fuse-section-header {
   background: $navy;
@@ -20,7 +40,7 @@ $yellowTint: #FFEEB2;
 
 .fuse-countdown-clock {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   gap: 20px;
@@ -50,8 +70,7 @@ $yellowTint: #FFEEB2;
     }
   }
 
-  // Small devices (landscape phones, 576px and up)
-  @media (min-width: 576px) {
+  @media (min-width: $sm-min-width) {
     .time-wrapper {
       width: 180px;
       height: 180px;
@@ -66,11 +85,10 @@ $yellowTint: #FFEEB2;
     }
   }
 
-  // Medium devices (tablets, 768px and up)
-  @media (min-width: 768px) {
+  @media (min-width: $md-min-width) {
     .time-wrapper {
-        width: 210px;
-        height: 210px;
+        width: 250px;
+        height: 250px;
     
         .time {
           font-size: 5rem;
@@ -80,21 +98,6 @@ $yellowTint: #FFEEB2;
           font-size: 1.3rem;
         }
       }
-  }
-
-  // Large devices (desktops, 992px and up)
-  @media (min-width: 992px) {
-    
-  }
-
-  // X-Large devices (large desktops, 1200px and up)
-  @media (min-width: 1200px) {
-    
-  }
-
-  // XX-Large devices (larger desktops, 1400px and up)
-  @media (min-width: 1400px) {
-    
   }
 }
 
@@ -129,13 +132,13 @@ $yellowTint: #FFEEB2;
   justify-content: space-around;
 
   // Small devices (landscape phones, 576px and up)
-  @media (min-width: 576px) {
+  @media (min-width: $sm-min-width) {
     grid-template-columns: repeat(auto-fill, 45%);
   }
   
   // Medium devices (tablets, 768px and up)
-  @media (min-width: 768px) {
-    grid-template-columns: repeat(auto-fill, 30%);
+  @media (min-width: $md-min-width) {
+    grid-template-columns: repeat(auto-fill, 32.4%);
   }
 }
 
