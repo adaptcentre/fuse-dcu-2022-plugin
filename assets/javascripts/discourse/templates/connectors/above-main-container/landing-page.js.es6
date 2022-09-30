@@ -65,6 +65,15 @@ function checkLoginRequired(url, component) {
     if (element) {
       element.style.display = 'none'
     }
+
+    try {
+      document.querySelector('#fuse-sign-up-btn').addEventListener('click', () => {
+        document.querySelector('.sign-up-button').click()
+      })
+      document.querySelector('#fuse-log-in-btn').addEventListener('click', () => {
+        document.querySelector('.login-button').click()
+      })
+    } catch(err) {}
   }, 800)
 }
 
