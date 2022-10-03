@@ -181,6 +181,14 @@ $xxl-min-width: 1400px;
 
     display: flex;
     align-items: flex-end;
+
+    :after {
+      content: '/';
+    }
+
+    :last-child::after {
+      content: '';
+    }
   }
 }
 
