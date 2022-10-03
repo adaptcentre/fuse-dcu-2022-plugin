@@ -1,5 +1,5 @@
 $navy: #00334F;
-$blue: #00A5F7;
+$blue: #2d9dd7;
 $yellow: #FFC800;
 $yellowTint: #FFEEB2;
 
@@ -38,20 +38,37 @@ $xxl-min-width: 1400px;
   }
 }
 
+.fuse-welcome-events {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 100%);
+
+  > div {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  @media (min-width: $md-min-width) {
+    grid-template-columns: repeat(auto-fill, 50%);
+    > div {  
+      
+    }
+  }
+}
+
 .fuse-countdown-clock {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 20px;
   user-select: none;
+  row-gap: 1rem;
+  //column-gap: 0.5rem;
 
   .time-wrapper {
     text-align: center;
-
     background: $navy;
-    width: 150px;
-    height: 150px;
+    width: calc(50% - 0.5rem);
+    aspect-ratio: 1 / 1;
 
     display: flex;
     justify-content: center;
@@ -72,11 +89,10 @@ $xxl-min-width: 1400px;
 
   @media (min-width: $sm-min-width) {
     .time-wrapper {
-      width: 180px;
-      height: 180px;
-  
+      width: calc(25% - 1rem);
+
       .time {
-        font-size: 4rem;
+        font-size: 3rem;
       }
   
       .desc {
@@ -87,9 +103,6 @@ $xxl-min-width: 1400px;
 
   @media (min-width: $md-min-width) {
     .time-wrapper {
-        width: 250px;
-        height: 250px;
-    
         .time {
           font-size: 5rem;
         }
@@ -127,18 +140,17 @@ $xxl-min-width: 1400px;
 
 .fuse-event-wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 90%);
-  gap: 15px;
-  justify-content: space-around;
+  grid-template-columns: repeat(auto-fill, 100%);
+  row-gap: 15px;
+  //justify-content: space-around;
 
-  // Small devices (landscape phones, 576px and up)
   @media (min-width: $sm-min-width) {
-    grid-template-columns: repeat(auto-fill, 45%);
+    justify-content: space-between;
+    grid-template-columns: repeat(auto-fill, calc(50% - 0.5rem));
   }
   
-  // Medium devices (tablets, 768px and up)
   @media (min-width: $md-min-width) {
-    grid-template-columns: repeat(auto-fill, 32.4%);
+    grid-template-columns: repeat(auto-fill, calc(33% - 0.5rem));
   }
 }
 
@@ -184,6 +196,16 @@ $xxl-min-width: 1400px;
 .login-required-wrapper {
   display: flex;
   justify-content: center;
+}
+
+.bg-yellow {
+  background: $yellowTint;
+  color: $navy;
+}
+
+.bg-blue {
+  background: $blue;
+  color: white;
 }
 
 //  --- --- --- --- --- --- --- ---
