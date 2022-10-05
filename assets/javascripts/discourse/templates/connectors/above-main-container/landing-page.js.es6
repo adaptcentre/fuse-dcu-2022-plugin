@@ -150,5 +150,9 @@ function isCorrectUrl( url ) {
     return true
   }
 
+  if (url === '/latest') {
+    return true
+  }
+
   return false
 }
