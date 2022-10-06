@@ -22,6 +22,7 @@ function init(api, component, args) {
     let correctUrl = isCorrectUrl(url)
 
     component.set('showPlugin', false)
+    
     clearTimeout(clockTimeout)
     clearTimeout(metaTimeout)
 

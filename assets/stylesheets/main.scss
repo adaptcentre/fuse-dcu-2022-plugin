@@ -48,7 +48,8 @@ $xxl-min-width: 1400px;
   }
 
   @media (min-width: $md-min-width) {
-    grid-template-columns: repeat(auto-fill, 50%);
+    grid-template-columns: repeat(auto-fill, 49%);
+    justify-content: space-between;
     > div {  
       
     }
