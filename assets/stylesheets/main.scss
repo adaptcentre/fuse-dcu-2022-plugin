@@ -41,7 +41,7 @@ $xxl-min-width: 1400px;
 .fuse-welcome-events {
   display: grid;
   grid-template-columns: repeat(auto-fill, 100%);
-
+  row-gap: 1rem;
   > div {
     padding-left: 10px;
     padding-right: 10px;
