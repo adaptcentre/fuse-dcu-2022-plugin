@@ -58,7 +58,8 @@ function checkLoginRequired(url, component) {
     return null
   }
 
-  component.set('showRequiredLogin', true)
+  //component.set('showRequiredLogin', true)
+  component.set('showRequiredLogin', false)
 
   setTimeout(() => {
     let element = document.querySelector('.container.ember-view')
