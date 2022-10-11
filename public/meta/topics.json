@@ -10,7 +10,8 @@
     "time": {
       "start": "10:00",
       "end": "10:45"
-    }
+    },
+    "closed": true
   },
   {
     "title": "Living the DCU Values",
