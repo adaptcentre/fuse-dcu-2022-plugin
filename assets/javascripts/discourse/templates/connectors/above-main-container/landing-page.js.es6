@@ -120,7 +120,7 @@ function clockTick(component) {
 }
 
 function metaTick(component) {
-  let url = 'https://raw.githubusercontent.com/adaptcentre/fuse-dcu-2022-plugin/main/public/meta/topics.json'
+  let url = component.siteSettings.fuse_manifest_url
 
   url += `?t=${Date.now()}`
 

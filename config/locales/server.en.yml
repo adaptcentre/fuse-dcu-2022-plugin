@@ -3,3 +3,4 @@ en:
     fuse_enabled: "Do you want to enable the plugin?"
     fuse_date: "MM DD YYYY HH:MM:SS GMT+0100"
     fuse_list_controls: "Show top menu above category/topic list"
+    fuse_manifest_url: "Url to json manifest file"

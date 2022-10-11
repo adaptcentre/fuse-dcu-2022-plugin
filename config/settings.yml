@@ -8,3 +8,6 @@ plugins:
   fuse_list_controls: 
     default: true
     client: true
+  fuse_manifest_url:
+    default: ''
+    client: true
