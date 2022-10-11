@@ -26,7 +26,8 @@
       "start": "10:15",
       "end": "11:00"
     },
-    "closed": false
+    "closed": false,
+    "visible": false
   },
   {
     "title": "Building Connections across the DCU Community",
