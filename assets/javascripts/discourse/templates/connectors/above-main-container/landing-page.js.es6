@@ -128,12 +128,13 @@ function metaTick(component) {
     .then(res => res.json())
     .then(data => {
       component.set('events', data)
+      component.set('liveEvents', data.filter(d => d.isLive))
+      component.set('showLiveEvents', data.filter(d => d.isLive).length > 0 ? true : false)
     })
-  
 
   metaTimeout = setTimeout(() => {
-   // metaTick(component)
-  }, 1000 * 5) // every 5 seconds?
+    metaTick(component)
+  }, 1000 * 30) // every 30 seconds?
 }
 
 // --- --- --- --- --- --- --- --- ---
