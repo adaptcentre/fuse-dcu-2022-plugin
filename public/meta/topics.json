@@ -26,7 +26,7 @@
       "start": "10:15",
       "end": "11:00"
     },
-    "closed": false,
+    "closed": true,
     "visible": false
   },
   {
