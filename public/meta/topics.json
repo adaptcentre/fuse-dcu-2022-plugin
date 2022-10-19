@@ -4,7 +4,8 @@
     "categoryId": 6,
     "topicId": 13,
     "chairs": [
-      "Daire Keogh"
+      "Marian Burns",
+      "Anne Sinnott"
     ],
     "date": "21/10/2022",
     "time": {
@@ -64,7 +65,7 @@
     "isLive": false
   },
   {
-    "title": "Enhancing our Communications",
+    "title": "Enhancing our Communications Internally",
     "categoryId": 6,
     "topicId": 17,
     "chairs": [
@@ -164,8 +165,8 @@
     "categoryId": 6,
     "topicId": 23,
     "chairs": [
-      "Marian Burns",
       "Daire Keogh"
+      "Marian Burns"
     ],
     "date": "21/10/2022",
     "time": {
