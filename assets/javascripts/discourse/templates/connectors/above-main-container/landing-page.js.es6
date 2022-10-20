@@ -34,7 +34,6 @@ function init(api, component, args) {
     }
 
     checkListControls(component)
-    checkLoginRequired(url, component)
   })
 }
 
@@ -49,34 +48,6 @@ function checkListControls(component) {
   if(element) {
     element.style.display = showListControls ? 'block' : 'none'
   }
-}
-
-function checkLoginRequired(url, component) {
-  
-  if (url !== '/login') {
-    component.set('showRequiredLogin', false)
-    return null
-  }
-
-  //component.set('showRequiredLogin', true)
-  component.set('showRequiredLogin', false)
-
-  setTimeout(() => {
-    let element = document.querySelector('.container.ember-view')
-
-    if (element) {
-      element.style.display = 'none'
-    }
-
-    try {
-      document.querySelector('#fuse-sign-up-btn').addEventListener('click', () => {
-        document.querySelector('.sign-up-button').click()
-      })
-      document.querySelector('#fuse-log-in-btn').addEventListener('click', () => {
-        document.querySelector('.login-button').click()
-      })
-    } catch(err) {}
-  }, 800)
 }
 
 // --- --- --- --- --- --- --- --- ---
