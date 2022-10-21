@@ -124,7 +124,7 @@
       "start": "13:45",
       "end": "14:30"
     },
-    "closed": true,
+    "closed": false,
     "visible": true,
     "isLive": false
   },
