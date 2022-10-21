@@ -12,7 +12,7 @@
       "start": "10:00",
       "end": "10:45"
     },
-    "closed": true,
+    "closed": false,
     "visible": true,
     "isLive": false
   },
