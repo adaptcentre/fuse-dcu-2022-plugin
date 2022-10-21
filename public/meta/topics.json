@@ -173,7 +173,7 @@
       "start": "15:15",
       "end": "16:00"
     },
-    "closed": true,
+    "closed": false,
     "visible": true,
     "isLive": false
   }
