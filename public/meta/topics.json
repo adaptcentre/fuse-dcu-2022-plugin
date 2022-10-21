@@ -108,7 +108,7 @@
       "start": "13:15",
       "end": "14:00"
     },
-    "closed": true,
+    "closed": false,
     "visible": true,
     "isLive": false
   },
