@@ -156,7 +156,7 @@
       "start": "14:45",
       "end": "15:30"
     },
-    "closed": true,
+    "closed": false,
     "visible": true,
     "isLive": false
   },
