@@ -46,7 +46,7 @@
     },
     "closed": false,
     "visible": true,
-    "isLive": true
+    "isLive": false
   },
   {
     "title": "Themes of the DCU Strategic Plan 2023-2028",
@@ -78,7 +78,7 @@
     },
     "closed": true,
     "visible": true,
-    "isLive": false
+    "isLive": true
   },
   {
     "title": "Celebrating a Diverse and Inclusive DCU Community",
