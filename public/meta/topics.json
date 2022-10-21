@@ -76,7 +76,7 @@
       "start": "12:15",
       "end": "13:00"
     },
-    "closed": true,
+    "closed": false,
     "visible": true,
     "isLive": true
   },
