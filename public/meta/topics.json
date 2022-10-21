@@ -44,7 +44,7 @@
       "start": "10:45",
       "end": "11:30"
     },
-    "closed": true,
+    "closed": false,
     "visible": true,
     "isLive": false
   },
